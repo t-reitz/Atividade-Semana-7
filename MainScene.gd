@@ -20,6 +20,6 @@ func _process(delta):
 func spawn_enemy():
 	var enemy = enemy_scene.instance()
 	add_child(enemy)
-	var x = rand_range(0, get_viewport().get_visible_rect().size.x) # Spawna os inimigos em uma coordenada de x aleatoria
+	var x = rand_range(0, 1000) # Spawna os inimigos em uma coordenada de x aleatoria entre 0  e 1000
 	enemy.position = Vector2(x, 0) 
 	enemy.set_linear_velocity(Vector2(0, enemy_fall_speed))
